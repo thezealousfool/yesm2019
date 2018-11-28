@@ -59,9 +59,9 @@ window.onload = () => {
         e.preventDefault();
         if (!snapping) {
             snapping = true;
-            if (e.deltaY > 0)
+            if (e.deltaY > 10)
                 scroll_down();
-            else if (e.deltaY < 0)
+            else if (e.deltaY < -10)
                 scroll_up();
             else
                 snapping = false;
@@ -84,10 +84,28 @@ window.onload = () => {
                 scroll_to_last();
             } else {
                 snapping = false;
-                console.log(e.which);
             }
         } else {
             e.preventDefault();
+        }
+    });
+    var touch_startY = null;
+    window.addEventListener('touchstart', (e) => {
+        if (snapping)
+            return;
+        touch_startY = e.touches[0].screenY;
+    });
+    window.addEventListener('touchmove', (e) => {
+        if (snapping || touch_startY === null)
+            return;
+        var touchY = e.touches[0].screenY;
+        if (Math.abs(touchY-touch_startY) > 10) {
+            snapping = true;
+            if (touchY - touch_startY < 0)
+                scroll_down();
+            else
+                scroll_up();
+            touch_startY = null;
         }
     });
 }
