@@ -1,3 +1,13 @@
+html {
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    will-change: transform;
+    transition: transform 0.5s;
+}
+
 section {
     height: 100vh;
     display: flex;
