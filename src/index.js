@@ -117,4 +117,44 @@ document.addEventListener('DOMContentLoaded', (e) => {
         snapping = true;
         scroll_to();
     });
+    var logo = document.getElementById("hero-logo");
+    logo.addEventListener('load', (e) => {
+        var duration_each = 500;
+        var svgDoc = logo.contentDocument;
+        var rects = svgDoc.getElementsByTagName('rect');
+        var paths = svgDoc.getElementsByTagName('path');
+        for(var i=0; i<rects.length; ++i) {
+            var old_h = rects[i].getAttribute('height');
+            rects[i].setAttribute('visibility', 'hidden');
+            var anim = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'animate');
+            anim.setAttribute('attributeName', 'height');
+            anim.setAttribute('from', 0);
+            anim.setAttribute('to', old_h);
+            anim.setAttribute('dur', duration_each+'ms');
+            anim.setAttribute('begin', (i*duration_each)+'ms');
+            anim.onbegin = (e) => {
+                e.path[1].setAttribute('visibility', 'visible');
+            }
+            rects[i].appendChild(anim);
+        }
+        for(var i=0; i<paths.length; ++i) {
+            paths[i].setAttribute('visibility', 'hidden');
+            var anim = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'animate');
+            anim.setAttribute('attributeName', 'opacity');
+            anim.setAttribute('from', 0);
+            anim.setAttribute('to', 1);
+            anim.setAttribute('dur', duration_each+'ms');
+            anim.setAttribute('begin', ((i+rects.length)*duration_each)+'ms');
+            anim.onbegin = (e) => {
+                e.path[1].setAttribute('visibility', 'visible');
+            }
+            paths[i].appendChild(anim);
+        }
+        window.setTimeout(() => {
+            var div = document.getElementById('hero-text');
+            console.log(div);
+            div.style.transform = 'none';
+            div.style.opacity = 1;
+        }, duration_each*(rects.length+paths.length) + 10);
+    });
 });
