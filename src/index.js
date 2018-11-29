@@ -9,7 +9,7 @@ var snapping = false;
 function scroll_to() {
     var str ='translateY(-'+offsets[currentIndex]+'px)';
     main.style.transform = str;
-    window.setTimeout(() => snapping=false, 500);
+    window.setTimeout(() => snapping=false, 600);
 }
 
 function scroll_to_first() {
@@ -56,7 +56,7 @@ function get_section_offsets() {
     }
 }
 
-window.onload = () => {
+document.addEventListener('DOMContentLoaded', (e) => {
     main = document.getElementById("main");
     get_section_offsets();
     main.addEventListener('wheel', (e) => {
@@ -117,4 +117,4 @@ window.onload = () => {
         snapping = true;
         scroll_to();
     });
-}
+});
