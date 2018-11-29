@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport" />
     <meta name="theme-color" content="#fff">
-    <link rel="shortcut icon" href="img/logo.svg">
     <title>YESM 2019</title>
 </head>
 <body>
     <script src="./index.js"></script>
     <header>
-        <img src="./img/logo.svg" alt="">
+        <a href=""><img src="./img/logo.svg" alt=""></a>
         <nav>
-            <li class="nav--active"><a href="/">Home</a></li>
+            <li class="nav--active"><a href="">Home</a></li>
             <li><a href="/guest">Guest</a></li>
             <li><a href="/events">Events</a></li>
             <li><a href="/sponsors">Sponsors</a></li>
@@ -21,9 +20,11 @@
     </header>
     <main id="main">
         <section>
-            <img src="./img/logo.svg" style="max-width:80%; max-height:80%;" alt="">
-            <h1 style="font-weight: lighter; font-weight: 300; margin: 0.5em 0 0 0;">Young Economist Students' Meet</h1>
-            <h2 style="font-weight: lighter; font-weight: 300">16th, 17th and 18th January, 2019</h2>
+            <object type="image/svg+xml" id="hero-logo" data="img/logo.svg" style="max-width:80%; max-height:80%;"></object>
+            <div id="hero-text" style="opacity: 0;">
+                <h1>Young Economist Students' Meet</h1>
+                <h2>16th, 17th and 18th January, 2019</h2>
+            </div>
         </section>
         <section class="content-wrap">
             <img src="img/yesm.jpg" alt="">

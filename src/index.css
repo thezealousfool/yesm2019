@@ -48,3 +48,18 @@ section {
 .content-wrap .content p {
     text-align: left;
 }
+
+#hero-text {
+    will-change: transform, opacity;
+    transition: transform 0.5s ease-in-out, opacity 0.4s ease-in-out;
+    transform: translateY(20px);
+}
+
+#hero-text h1 {
+    margin: 0.5em 0 0 0;
+}
+
+#hero-text h1, #hero-text h2 {
+    font-weight: lighter;
+    font-weight: 300;
+}
