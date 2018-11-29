@@ -9,7 +9,7 @@ var snapping = false;
 function scroll_to() {
     var str ='translateY(-'+offsets[currentIndex]+'px)';
     main.style.transform = str;
-    window.setTimeout(() => snapping=false, 600);
+    window.setTimeout(() => snapping=false, 400);
 }
 
 function scroll_to_first() {

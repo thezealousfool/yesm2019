@@ -5,7 +5,7 @@ html, body {
 
 main {
     will-change: transform;
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 }
 
 section {
@@ -46,5 +46,5 @@ section {
 }
 
 .content-wrap .content p {
-    text-align: justify;
+    text-align: left;
 }
