@@ -48,13 +48,16 @@ function scroll_up() {
     }
 }
 
-
-window.onload = () => {
-    main = document.getElementById("main");
+function get_section_offsets() {
     var sections = document.getElementsByTagName('section');
     for(var i = 0; i < sections.length; ++i) {
         offsets.push(sections[i].offsetTop);
     } 
+}
+
+window.onload = () => {
+    main = document.getElementById("main");
+    get_section_offsets();
     main.addEventListener('wheel', (e) => {
         e.preventDefault();
         if (!snapping) {
@@ -107,5 +110,8 @@ window.onload = () => {
                 scroll_up();
             touch_startY = null;
         }
+    });
+    window.addEventListener('resize', (e) => {
+        get_section_offsets();
     });
 }
