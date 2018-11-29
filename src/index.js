@@ -114,5 +114,7 @@ window.onload = () => {
     });
     window.addEventListener('resize', (e) => {
         get_section_offsets();
+        snapping = true;
+        scroll_to();
     });
 }
