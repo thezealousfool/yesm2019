@@ -50,9 +50,10 @@ function scroll_up() {
 
 function get_section_offsets() {
     var sections = document.getElementsByTagName('section');
+    offsets = [];
     for(var i = 0; i < sections.length; ++i) {
         offsets.push(sections[i].offsetTop);
-    } 
+    }
 }
 
 window.onload = () => {
