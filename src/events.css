@@ -1,0 +1,46 @@
+main {
+    margin-top: 5vh;
+}
+
+main li {
+    list-style: none;
+}
+
+main li {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+}
+
+main ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+article {
+    text-align: center;
+}
+
+article h1 {
+    display: none;
+}
+
+article h2 {
+    font-weight: normal;
+    font-size: 1.1em;
+    margin-top: -5em;
+    margin-bottom: 5em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+@media only screen and (max-width: 400px) {
+    article h2 {
+        font-size: 1em;
+        margin-top: -4.5em;
+        margin-bottom: 4.5em;
+    }
+}
