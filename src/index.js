@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         var setVisible = (elem, index) => {
             window.setTimeout(() => {
                 elem.setAttribute('visibility', 'visible');
-            }, (index*duration_each+10));
+            }, (index*duration_each+20));
         }
         for(var i=0; i<rects.length; ++i) {
             var old_h = rects[i].getAttribute('height');
