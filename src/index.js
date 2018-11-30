@@ -119,43 +119,33 @@ document.addEventListener('DOMContentLoaded', (e) => {
     });
     var logo = document.getElementById("hero-logo");
     logo.addEventListener('load', (e) => {
-        var duration_line_each = 300;
-        var duration_char_each = 600;
-        var svgDoc = logo.contentDocument;
-        var rects = svgDoc.getElementsByTagName('rect');
-        var paths = svgDoc.getElementsByTagName('path');
-        var setVisible = (elem, delay) => {
+        var svgDoc = logo.contentDocument,
+            rects = svgDoc.getElementsByTagName('rect'),
+            paths = svgDoc.getElementsByTagName('path'),
+            line_stagger = 200, line_duration = 800,
+            char_duration = 500,
+            rect_anim_time = line_stagger*(rects.length-1) + line_duration,
+            svg_anim_time = rect_anim_time + char_duration*paths.length;
+        var add_class = (elem, className, delay) => {
             window.setTimeout(() => {
-                elem.setAttribute('visibility', 'visible');
-            }, (delay+20));
+                elem.classList.add(className)
+            }, delay);
         }
         for(var i=0; i<rects.length; ++i) {
-            var old_h = rects[i].getAttribute('height');
             rects[i].setAttribute('visibility', 'hidden');
-            var anim = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'animate');
-            anim.setAttribute('attributeName', 'height');
-            anim.setAttribute('from', 0);
-            anim.setAttribute('to', old_h);
-            anim.setAttribute('dur', duration_line_each+'ms');
-            anim.setAttribute('begin', (i*duration_line_each)+'ms');
-            setVisible(rects[i], i*duration_line_each);
-            rects[i].appendChild(anim);
+            add_class(rects[i], 'svg-rect', i*line_stagger);
         }
         for(var i=0; i<paths.length; ++i) {
             paths[i].setAttribute('visibility', 'hidden');
-            var anim = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'animate');
-            anim.setAttribute('attributeName', 'opacity');
-            anim.setAttribute('from', 0);
-            anim.setAttribute('to', 1);
-            anim.setAttribute('dur', duration_char_each+'ms');
-            anim.setAttribute('begin', ((i*duration_char_each)+(rects.length*duration_line_each))+'ms');
-            setVisible(paths[i], (i*duration_char_each)+(rects.length*duration_line_each));
-            paths[i].appendChild(anim);
+            add_class(paths[i], 'svg-path', rect_anim_time+10+i*char_duration);
         }
+        var style = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'style');
+        style.innerHTML = `.svg-rect{visibility:visible;animation:scaleRect 0.8s ease-in-out;}@keyframes scaleRect{from{height:0;}}.svg-path{visibility:visible;animation:animPath 0.5s ease-in-out;}@keyframes animPath{from{opacity:0;}}`;
+        svgDoc.children[0].appendChild(style);
         window.setTimeout(() => {
             var div = document.getElementById('hero-text');
             div.style.transform = 'none';
             div.style.opacity = 1;
-        }, (duration_line_each*rects.length)+(duration_char_each*paths.length) + 10);
+        }, svg_anim_time+10);
     });
 });
