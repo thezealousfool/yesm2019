@@ -57,8 +57,6 @@ function get_section_offsets() {
 }
 
 document.addEventListener('DOMContentLoaded', (e) => {
-    document.body.style.height = '100vh';
-    document.body.style.overflow = 'hidden';
     main = document.getElementById('main');
     get_section_offsets();
     var logo = document.getElementById('hero-logo');
