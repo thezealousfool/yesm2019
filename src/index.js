@@ -57,8 +57,11 @@ function get_section_offsets() {
 }
 
 document.addEventListener('DOMContentLoaded', (e) => {
-    main = document.getElementById("main");
+    document.body.style.height = '100vh';
+    document.body.style.overflow = 'hidden';
+    main = document.getElementById('main');
     get_section_offsets();
+    var logo = document.getElementById('hero-logo');
     main.addEventListener('wheel', (e) => {
         e.preventDefault();
         if (!snapping) {
@@ -117,7 +120,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
         snapping = true;
         scroll_to();
     });
-    var logo = document.getElementById("hero-logo");
     logo.addEventListener('load', (e) => {
         var svgDoc = logo.contentDocument,
             rects = svgDoc.getElementsByTagName('rect'),
