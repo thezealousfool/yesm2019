@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build",
-    "dev": "rm -rf dist && npx parcel src/index.html src/events.html --global yesm",
-    "build": "rm -rf dist && npx parcel build src/index.html src/events.html --global yesm"
+    "dev": "rm -rf dist && npx parcel src/index.html src/events/index.html --global yesm",
+    "build": "rm -rf dist && npx parcel build src/index.html src/events/index.html --global yesm"
   },
   "keywords": [
     "YESM 2019",
