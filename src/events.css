@@ -20,7 +20,14 @@ main ul {
     flex-wrap: wrap;
 }
 
+#flagship {
+    max-width: none;
+}
+
 article {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
     text-align: center;
 }
 
@@ -35,10 +42,6 @@ article h2 {
     margin-bottom: 20%;
     text-transform: uppercase;
     color: #fff;
-}
-
-#flagship {
-    max-width: 900px;
 }
 
 @media only screen and (max-width: 515px) {
@@ -56,25 +59,9 @@ article h2 {
     }
 }
 
-@media only screen and (min-width: 768px) {
-    #flagship h2 {
-        font-size: 1.3em;
-    }
-}
-
 @media only screen and (min-width: 890px) {
     main li {
         margin-left: 2em;
         margin-right: 2em;
-    }
-    #flagship h2 {
-        font-size: 1.5em;
-    }
-}
-
-@media only screen and (min-width: 1400px) {
-    #flagship {
-        margin-left: 12em;
-        margin-right: 12em;
     }
 }
