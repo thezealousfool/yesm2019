@@ -64,18 +64,3 @@ section {
     font-weight: lighter;
     font-weight: 300;
 }
-
-.bounce {
-    font-size:3em;
-    font-weight:300;
-    position:absolute;
-    will-change:transform;
-    bottom: 5vh;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-0.5em);}
-    60% {transform: translateY(-0.25em);}
-}
