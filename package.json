@@ -4,21 +4,12 @@
   "description": "Young Economist Students' Meet 2019",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build",
-    "dev": "rm -rf dist && npx parcel src/index.html src/events/index.html --global yesm",
-    "build": "rm -rf dist && npx parcel build src/index.html src/events/index.html --global yesm"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "YESM 2019",
     "YESM"
   ],
   "author": "Vivek Roy",
-  "license": "ISC",
-  "devDependencies": {
-    "parcel-bundler": "^1.10.3"
-  },
-  "dependencies": {
-    "index": "^0.4.0",
-    "index.js": "0.0.3"
-  }
+  "license": "ISC"
 }
