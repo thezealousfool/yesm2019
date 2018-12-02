@@ -1,6 +1,3 @@
-import './main.css'
-import './index.css'
-
 var main = null;
 var offsets = [];
 var currentIndex = 0;

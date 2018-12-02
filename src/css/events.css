@@ -31,7 +31,7 @@ article {
     text-align: center;
 }
 
-article h1 {
+.d_none {
     display: none;
 }
 
