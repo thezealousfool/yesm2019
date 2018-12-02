@@ -2,7 +2,7 @@ main {
     margin-top: 5vh;
 }
 
-main li {
+main ul li {
     list-style: none;
 }
 
@@ -42,6 +42,24 @@ article h2 {
     margin-bottom: 20%;
     text-transform: uppercase;
     color: #fff;
+}
+
+.limit {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.event_desc--list li {
+    max-width: unset;
+    padding-left: 0.5em;
+}
+
+.button {
+    display: inline-block;
+    background-color: #2196f3;
+    padding: 0.5em 1em;
+    color: white;
+    border-radius: 4px;
 }
 
 @media only screen and (max-width: 515px) {

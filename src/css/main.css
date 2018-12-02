@@ -80,7 +80,7 @@ section {
     overflow: hidden;
 }
 
-section p, section ul {
+section p, section ul, section ol, section h3 {
     text-align: left;
 }
 
