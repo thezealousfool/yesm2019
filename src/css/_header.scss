@@ -52,12 +52,8 @@ header {
                 @media only screen and (max-width: 354px) {
                     font-size: 0.8em;
                 }
-            }
-
-            &.nav--active {
-                color: #2196f3;
-
-                a {
+                &.nav--active {
+                    color: #2196f3;
                     border-bottom: 3px solid;
                 }
             }
