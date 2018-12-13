@@ -1,0 +1,37 @@
+{% extends "events_layout.njk" %}
+
+{% block edesc %}Proffing It. Mock Classroom.{% endblock %}
+{% block title %}YESM 2019 | Proffing It{% endblock %}
+
+{% block econtent %}
+    {% import 'macros/event_text.njk' as et %}
+    {{ et.gen_htext("pit","77.6","15.9") }}
+    <h1 class="d_none">Proffing It</h1>
+    <h2>Mock Classroom</h2>
+    <p>So do YOU have what it takes to be <b>‘THE PROFESSOR IN DEMAND’</b>?</p>
+    <p>If Yes, then ladies and gentleman, it’s time to put on your thinking caps and armed with the attendance register and a duster embark on the journey to become a future professor. This January, be a part of a mock classroom simulation where your demand and student supply depends on your teaching skills.</p>
+    {{ et.gen_h3("General rules and regulations:") }}
+    {{ et.gen_ul([
+        "This event is opened only to Undergraduate students majoring in Economics.",
+        "There is no limit on the number of participants from any particular institution.",
+        "A white board, black board, duster and chalks will be provided in both the prelims and the finals.",
+        "No Laptop, no mobile phones, or paper will be allowed while giving the lecture.",
+        "Participants are required to bring their college/University identity proof."
+    ]) }}
+    {{ et.gen_h3("Prelims:") }}
+    {{ et.gen_ul([
+        "Each participant will be mailed 3 topics in advance. The participant will have to choose a topic and deliver a lecture on the same.",
+        "Topics will be allotted a day before the event takes place.",
+        "Each participant will be given 6 min to deliver their lecture after which the participant will be asked questions based on what he/she has taught by the judges and the mock students for 3 min.",
+        "A total of 6 participants will be selected for the final round.",
+        "Points will be given based on a variety of factors such as your knowledge on the topic, the decorum of the class, your answers to the questions asked by the judges, how well you handle the questions from your mock students and of course overall presentation.",
+        "The prelims will be an off-stage event."
+    ]) }}
+    {{ et.gen_h3("Finals:") }}
+    {{ et.gen_ul([
+        "The participant will be given 2 topics after the preliminary round. They will have to choose one of the topics and deliver a lecture on the same on the finals day.",
+        "Each participant will be given 10 min to deliver their lecture after which the participant will be asked questions based on what he/she has taught by the judges and the mock students for 3 min.",
+        "The final round will be an on stage event."
+    ]) }}
+    {{ et.gen_btn("https://goo.gl/forms/Zx33oqkpbsqX0YbI3") }}
+{% endblock %}

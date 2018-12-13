@@ -1,30 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport" />
-    <meta name="theme-color" content="#fff">
-    <meta name="Description" content="Young Economist Students' Meet 2019 (YESM 2019). Venue: Jadavpur University. Department of Economics. Designer: Vivek Roy.">
-    <title>YESM 2019</title>
-    <link rel="shortcut icon" href="/img/favicon.png">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <script src="/js/index.js"></script>
-</head>
+{% extends 'layout.njk' %}
+
+{% block title %}YESM 2019{% endblock %}
+{% block desc %}Young Economist Students' Meet 2019 (YESM 2019). Venue: Jadavpur University. Department of Economics. Designer: Vivek Roy.{% endblock %}
+
+{% block metahead %}
+    <link rel="preload" href="/css/index.css" as="style">
+    <link rel="preload" href="/js/index.js" as="script">
+    <link rel="preload" href="/img/logo.svg" as="image">
+    <link rel="preload" href="/img/yesm.jpg" as="image">
+    <link rel="preload" href="/img/theme.jpg" as="image">
+    <link rel="preload" href="/img/dept.jpg" as="image">
+    <link rel="preload" href="/img/previous.jpg" as="image">
+    <link rel="preload" href="/img/instagram.svg" as="image">
+    <link rel="preload" href="/img/facebook.svg" as="image">
+    <link rel="prerender" href="/events">
+
+    <link rel="stylesheet" href="css/index.css">
+    <script type="application/javascript" src="/js/index.js"></script>
+    <style>
+        html, body {
+            height: 100vh;
+            overflow: hidden;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
 <body id="home">
-    <header>
-        <a href="javascript:void(0);"><img src="/img/logo.svg" alt=""></a>
-        <nav>
-            <li class="nav--active"><a href="javascript:void(0);">Home</a></li>
-            <li><a href="/guest">Guest</a></li>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/sponsors">Sponsors</a></li>
-            <li><a href="/our-team">Our Team</a></li>
-        </nav>
-    </header>
+    {% import 'macros/header.njk' as nav %}
+    {{ nav.gen('h') }}
     <main id="main">
         <section>
-            <object type="image/svg+xml" id="hero-logo" data="img/logo.svg" style="max-width:70%; max-height:70%; pointer-events:none;"></object>
+            <object type="image/svg+xml" id="hero-logo" data="/img/logo.svg" style="max-width:70%; max-height:70%; pointer-events:none;"></object>
             <div id="hero-text">
                 <h1>Young Economist Students' Meet</h1>
                 <h2>16th, 17th and 18th January, 2019</h2>
@@ -110,4 +117,4 @@
         </style>
     </noscript>
 </body>
-</html>
+{% endblock %}

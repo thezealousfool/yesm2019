@@ -1,0 +1,34 @@
+{% block edesc %}Ecolens. Film Making.{% endblock %}
+{% block title %}YESM 2019 | Ecolens{% endblock %}
+
+{% block econtent %}
+    {% import 'macros/event_text.njk' as et %}
+    {{ et.gen_htext("elens","50.1","15.9") }}
+    <h1 class="d_none">Ecolens</h1>
+    <h2>Videography</h2>
+    <p>Ecolens is an event that showcases cinematographic and directorial talent through the making and screening of short films on relevant socio-economic issues.</p>
+    {{ et.gen_h3("Rules:") }}
+    {{ et.gen_ul([
+        "Films should not exceed 10+2 minutes. No submission will be screened for more than 12 minutes.",
+        "The maximum number of team members is 6 (including the director).",
+        "The submission must be under the name of the director.",
+        "Cross-college teams are allowed.",
+        "Films can be in any language. Participants may use subtitles for better clarity and expression."
+    ]) }}
+    {{ et.gen_h3("Process of Selection:") }}
+    <p>The films will go through a two stage selection process. The first round of selection will be done by Team YESM 2019, wherein six of the best films will be chosen. These six films will be screened in front of a panel of a judge and an audience during YESM 2019 (Date and time will be specified beforehand).</p>
+    {{ et.gen_h3("Topics:") }}
+    {{ et.gen_ul([
+        "Beyond the lines",
+        "Out of delivery"
+    ]) }}
+    <p>Participants are required to make film on any one of the given topics. They are encouraged to keep in mind the socio-economic relevance of the topic while preparing their entries. Entries having objectionable content or failing to adhere to the topic will not be accepted.</p>
+    {{ et.gen_h3("Submission Details:") }}
+    <p>Entries are to be submitted via either of these two methods:</p>
+    {{ et.gen_ul([
+        "Link Sharing through Google Drive. Mails should be sent to <a class=\"underline\" href=\"mailto:submissions@yesm.in\">submissions@yesm.in</a> with the subject “Ecolens-Videography”. The body of the mail must include the name of the registrant, director and name of institution(s).",
+        "CD submission at the Department of Economics Office (UG Arts Building, 3rd Floor). The CD should have the name of the registrant and director on it."
+    ]) }}
+    <p>Last date for submission of film: <b>29th December, 2018</b></p>
+    {{ et.gen_btn("https://goo.gl/forms/EtfbDCZjOOQ9aQc22") }}
+{% endblock %}

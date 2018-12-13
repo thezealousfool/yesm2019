@@ -1,0 +1,46 @@
+{% extends "events_layout.njk" %}
+
+{% block edesc %}Analyse this. Critical Thinking.{% endblock %}
+{% block title %}YESM 2019 | Analyse This{% endblock %}
+
+{% block econtent %}
+    {% import 'macros/event_text.njk' as et %}
+    {{ et.gen_htext("artb", "70.2", "15.9") }}
+    <h1 class="d_none">ARTbitrage</h1>
+    <h2>Poster making &amp; Doodling</h2>
+    <p>&quot;Art speaks when words are unable to explain. After all, creativity is the greatest rebellion in existence.&quot;</p>
+    <p>Who said you could only write a paper to present your ideas to the world? You could also splash some colours on a paper and make it speak a thousand words! This January, come, let your creativity explode!</p>
+    {{ et.gen_h3("General Rules:") }}
+    {{ et.gen_ul([
+        "No. of participant is one per team.",
+        "Topic will be disclosed at the venue.",
+        "Artwork may include written slogans, graphics and artwork.",
+        "Artwork may NOT include any official trademarked logos.",
+        "Decision of the judges will be final.",
+        "All artwork will be the sole property of the organisers after the competition is over.",
+        "They cannot contain any content, element, or material that violates a third party&#39;s publicity, privacy or intellectual property rights."
+    ]) }}
+    {{ et.gen_h3("Poster Making:") }}
+    <ol class="event_desc--list">
+        <li>Participants will have to bring their own art material.</li>
+        <li>The materials may include:
+            <ol class="event_desc--list" type="a">
+                <li>Paints (Poster colours or acrylic colours or water colours allowed)</li>
+                <li>Drawing board and drawing pins</li>
+                <li>Pencil and Eraser</li>
+                <li>Paint Brushes</li>
+                <li>Use of scale and compass is allowed.</li>
+            </ol>
+        </li>
+        <li>Participants will be provided with 1/2 a chart paper for poster making by the organizers.</li>
+        <li>Time limit : 1.5 hours</li>
+    </ol>
+    {{ et.gen_h3("Doodling:") }}
+    {{ et.gen_ul([
+        "Participants will have to bring their own art material.",
+        "Usage of any kind of pens, pencils, markers are allowed as long as it is free hand.",
+        "Participants will be provided with A4 size drawing sheet for doodling by the organizers.",
+        "Time limit : 1 hour."
+    ]) }}
+    {{ et.gen_btn("https://goo.gl/forms/4aYxnscvVIkKmgwY2") }}
+{% endblock %}

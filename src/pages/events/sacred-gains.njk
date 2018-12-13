@@ -1,0 +1,10 @@
+{% extends "events_layout.njk" %}
+
+{% block edesc %}Flagship event. Sacred Gains.{% endblock %}
+{% block title %}YESM 2019 | Sacred Gains{% endblock %}
+
+{% block econtent %}
+    {% import 'macros/event_text.njk' as et %}
+    {{ et.gen_htext("sgames","89.7","15.9") }}
+    <h1 class="d_none">Sacred Gains</h1>
+{% endblock %}

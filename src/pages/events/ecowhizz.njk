@@ -1,0 +1,27 @@
+{% extends "events_layout.njk" %}
+
+{% block edesc %}Ecowhizz. Quiz.{% endblock %}
+{% block title %}YESM 2019 | Ecowhizz{% endblock %}
+
+{% block econtent %}
+    {% import 'macros/event_text.njk' as et %}
+    {{ et.gen_htext("ewhizz","57.9","15.9") }}
+    <h1 class="d_none">Ecowhizz</h1>
+    <h2>Quiz</h2>
+    <p>It is said that knowledge is a true public good and increases in value as the number of people possessing it increases. A quest for knowledge exposes one to the true limits of the infinite. We can fall back on the words of John Kenneth Galbraith – “One of the greatest pieces of economic wisdom is to know what you do not know”.</p>
+    <p>The Department of Economics is proud to present to you the fourth event of YESM 2019: ECOWHIZZ This January, don your quizzing hats and give your grey cells a vigorous workout, as we celebrate the quest for knowledge and its enrichment. For all the wise owls and know-it-alls out there, this is an event not to be missed.</p>
+    {{ et.gen_h3("Abput:") }}
+    <p>A fairly general quiz with flavours of economics or finance. No specialised academic knowledge or understanding of economics is required to perform well in this quiz.</p>
+    {{ et.gen_h3("Open to:") }}
+    <p>Everybody aged 25 or below (born on or after 16th January 1993), including school and college students.</p>
+    {{ et.gen_h3("Format:") }}
+    <p>Written prelims. 8 teams qualify to the finals. Bounce and pounce to be followed in the finals.</p>
+    {{ et.gen_h3("Rules:") }}
+    {{ et.gen_ul([
+        "Two members per team.",
+        "Lone wolves allowed.",
+        "Cross college and cross department teams are allowed."
+    ]) }}
+    <p>Participants are requested to carry valid proof of age.</p>
+    {{ et.gen_btn("https://goo.gl/forms/H5vkM3gN0mZWRBZk2") }}
+{% endblock %}

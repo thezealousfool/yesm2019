@@ -1,0 +1,10 @@
+{% extends "events_layout.njk" %}
+
+{% block edesc %}OECD. Committee Simulation.{% endblock %}
+{% block title %}YESM 2019 | O E C D{% endblock %}
+
+{% block econtent %}
+    {% import 'macros/event_text.njk' as et %}
+    {{ et.gen_htext("oecd","49.3","15.8") }}
+    <h1 class="d_none">O E C D</h1>
+{% endblock %}

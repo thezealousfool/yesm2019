@@ -1,0 +1,26 @@
+{% extends "events_layout.njk" %}
+
+{% block edesc %}Questonomics. Levels' Race.{% endblock %}
+{% block title %}YESM 2019 | Quest-o-nomics{% endblock %}
+
+{% block econtent %}
+    {% import 'macros/event_text.njk' as et %}
+    {{ et.gen_htext("qmics","108.7","18.1") }}
+    <h1 class="d_none">Quest-o-nomics</h1>
+    <h2>Level's Race</h2>
+    <p>If you thought YESM is only about panel discussions and academic conversations, then we are here to prove you wrong. This event will ignite the child in you as you race towards the finishing line, looking for clues. If you love decoding riddles or if you find yourself solving crossword puzzles and Sudoku every morning, then this is the event, you definitely would not want to miss. So, this January, put your thinking caps on, and see you at the starting line!</p>
+    {{ et.gen_h3("Format:") }}
+    <p>The event consists of four levels. Each level consists of word puzzles, riddles, picture puzzles &amp; logic based questions - all related to Economics.</p>
+    {{ et.gen_h3("Rules:") }}
+    {{ et.gen_ul([
+        "Teams should comprise 2-3 members.",
+        "Only students enrolled in bachelor&#39;s course (UG) shall be allowed to participate.",
+        "Cross-college teams are allowed.",
+        "Teams will be marked on the number of correct answers (in all levels) and time taken to complete all four levels.",
+        "The decision of the moderators/organizers will be final and binding in all respect.",
+        "Participants should carry paper and pen for rough work.",
+        "Further details to be given at the time of the event."
+    ]) }}
+    <p>NOTE: Participants are advised to wear casuals and comfortable shoes.</p>
+    {{ et.gen_btn("https://goo.gl/forms/fzwkm0qh0SMNiFZI3") }}
+{% endblock %}

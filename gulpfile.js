@@ -7,9 +7,14 @@ const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-htmlmin');
 const del = require('del');
 const watch = require('gulp-watch');
+const njkRender = require('gulp-nunjucks-render');
+const sass = require('gulp-sass');
+
+sass.compiler = require('node-sass');
 
 gulp.task('css', function() {
-    return gulp.src(path.join('src', 'css', '*.css'))
+    return gulp.src(path.join('src', 'css', '*.scss'))
+            .pipe(sass().on('error', sass.logError))
             .pipe(autoprefixer({cascade:false}))
             .pipe(clean_css())
             .pipe(gulp.dest(path.join('dist', 'css')));
@@ -23,7 +28,8 @@ gulp.task('js', function() {
 });
 
 gulp.task('html', function() {
-    return gulp.src(path.join('src', '**', '*.html'))
+    return gulp.src(path.join('src', 'pages', '**', '*.njk'))
+            .pipe(njkRender({ path: [path.join('src', 'templates')] }))
             .pipe(htmlmin({collapseWhitespace: true, minifyCSS: true}))
             .pipe(gulp.dest('dist'));
 });
@@ -59,9 +65,10 @@ gulp.task('clean-imgs', function() {
 });
 
 gulp.task('watch', function() {
-    watch(path.join('src', 'css', '*.css'), gulp.series('clean-css', 'css'));
+    watch(path.join('src', 'css', '*.scss'), gulp.series('clean-css', 'css'));
     watch(path.join('src', 'js', '*.js'), gulp.series('clean-js', 'js'));
-    watch(path.join('src', '**', '*.html'), gulp.series('clean-html', 'html'));
+    watch(path.join('src', 'pages', '**', '*.njk'), gulp.series('clean-html', 'html'));
+    watch(path.join('src', 'templates', '**', '*.njk'), gulp.series('clean-html', 'html'));
     watch(path.join('src', 'img', '*'), gulp.series('clean-imgs', 'imgs'));
 });
 

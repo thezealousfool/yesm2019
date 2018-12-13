@@ -1,0 +1,67 @@
+{% extends 'layout.njk' %}
+
+{% block title %}YESM 2019 | Events{% endblock %}
+{% block desc %}Events page. Young Economist Students' Meet 2019 (YESM 2019). Venue: Jadavpur University. Department of Economics. Designer: Vivek Roy.{% endblock %}
+
+{% block metahead %}
+    <link rel="preload" href="/css/events.css" as="style">
+    <link rel="preload" href="/img/logo.svg" as="image">
+    <link rel="preload" href="/img/fig.svg" as="image">
+    <link rel="preload" href="/img/eventnames.svg" as="image">
+
+    <link rel="stylesheet" href="/css/events.css">
+{% endblock %}
+
+{% block content %}
+<body id="events">
+    {% import 'macros/header.njk' as nav %}
+    {% import 'macros/event_cover.njk' as cover %}
+    {{ nav.gen('e') }}
+    <main>
+        <section>
+            <h1>Events</h1>
+            <ul>
+                <li style="max-width: none;">
+                    {{ cover.gen("sacred-gains","Shutter Up","Flagship Event","1587","1154.4","ff1e5a","89.7","15.9","sgames") }}
+                </li>
+                <li>
+                    {{ cover.gen("oecd","O E C D","Committee Simulation","1587","1154.4","627dff","49.3","15.8","oecd") }}
+                </li>
+                <li>
+                    {{ cover.gen("polemic","Polemic","Debate","1587","1154.4","dbd437","50.2","15.9","pmic") }}
+                </li>
+                <li>
+                    {{ cover.gen("analyse-this","Analyse This","Critical Thinking","1587","1154.4","ff8700","84","15.8","athis") }}
+                </li>
+                <li>
+                    {{ cover.gen("ecowhizz","Ecowhizz","Quiz","1587","1154.4","8be44d","57.9","15.9","ewhizz") }}
+                </li>
+                <li>
+                    {{ cover.gen("bulls-and-bears","Bulls and Bears","Mock Stock","1587","1154.4","f39374","107.4","15.6","bandb") }}
+                </li>
+                <li>
+                    {{ cover.gen("quest-o-nomics","Quest-o-nomics","Levels' Race","1587","1154.4","c761ff","108.7","18.1","qmics") }}
+                </li>
+                <li>
+                    {{ cover.gen("paper-trail","Paper Trail","Paper Presentation","1587","1154.4","f26262","74.6","15.4","ptrail") }}
+                </li>
+                <li>
+                    {{ cover.gen("proffing-it","Proffing It","Mock Classroom","1587","1154.4","3792ff","77.6","15.9","pit") }}
+                </li>
+                <li>
+                    {{ cover.gen("write-on","Write On","Essay Writing","1587","1154.4","ff74b9","59.2","15.9","won") }}
+                </li>
+                <li>
+                    {{ cover.gen("artbitrage","ARTbitrage","Poster Making &amp; Doodling","1587","1154.4","6fecac","70.2","15.9","artb") }}
+                </li>
+                <li>
+                    {{ cover.gen("shutter-up","Shutter Up","Photography","1587","1154.4","da99e0","70.8","15.6","sup") }}
+                </li>
+                <li>
+                    {{ cover.gen("ecolens","Ecolens","Short Film Making","1587","1154.4","44d9e6","50.1","15.9","elens") }}
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+{% endblock %}
