@@ -9,7 +9,7 @@
 {% macro gen_ul(list) %}
 <ol class="event_desc--list">
     {% for litem in list %}
-    <li>{{ litem }}</li>
+    <li>{{ litem | safe }}</li>
     {% endfor %}
 </ol>
 {% endmacro %}

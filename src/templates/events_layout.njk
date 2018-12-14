@@ -9,7 +9,7 @@
 {% block content %}
 <body id="events">
     {% import 'macros/header.njk' as nav %}
-    {{ nav.gen('e') }}
+    {{ nav.gen('e_nest') }}
     <main>
         <section class="limit">
         {% block econtent %}{% endblock %}
