@@ -40,7 +40,7 @@ gulp.task('imgs', function() {
 });
 
 gulp.task('static', function() {
-    return gulp.src(path.join('src', '+(*.html|*.xml|_*)'))
+    return gulp.src(path.join('src', 'static', '*'))
             .pipe(gulp.dest('dist'));
 });
 
