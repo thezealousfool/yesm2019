@@ -1,1 +1,20 @@
-"use strict";"serviceWorker"in navigator?navigator.serviceWorker.getRegistrations().then(function(n){console.log("Registrations",n);var r=!0,e=!1,o=void 0;try{for(var t,i=function(){var r=t.value;r.unregister().then(function(n){return console.log(r,n),self.clients.matchAll()}).then(function(n){console.log(n),n.forEach(function(n){n.url&&"navigate"in n&&n.navigate(n.url)})})},l=n[Symbol.iterator]();!(r=(t=l.next()).done);r=!0)i()}catch(n){e=!0,o=n}finally{try{r||null==l.return||l.return()}finally{if(e)throw o}}}):console.log("Service worker not found");
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        console.log("Registrations", registrations);
+        for(let registration of registrations) {
+            registration.unregister().then(function(unreg_status) {
+                console.log(registration, unreg_status);
+                return self.clients.matchAll();
+            }).then(function(clients) {
+                console.log(clients);
+                clients.forEach(client => {
+                    if (client.url && "navigate" in client){
+                        client.navigate(client.url);
+                    }
+                });
+            });
+        }
+    });
+} else {
+    console.log("Service worker not found");
+}
