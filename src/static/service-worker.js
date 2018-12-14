@@ -16,5 +16,5 @@ if ('serviceWorker' in navigator) {
         }
     });
 } else {
-    console.log("Service worker not found");
+    console.log("Service worker not found", navigator);
 }
