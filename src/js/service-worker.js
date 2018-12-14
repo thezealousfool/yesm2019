@@ -7,7 +7,7 @@ document.addEventListener('load', function() {
                 }).then(function(clients) {
                     clients.forEach(client => {
                         if (client.url && "navigate" in client){
-                            client.navigate(client.url));
+                            client.navigate(client.url);
                         }
                     });
                 });
