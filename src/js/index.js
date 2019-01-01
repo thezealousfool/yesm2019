@@ -6,7 +6,9 @@ var snapping = false;
 function scroll_to() {
     var str ='translateY(-'+offsets[currentIndex]+'px)';
     main.style.transform = str;
-    window.setTimeout(() => snapping=false, 400);
+    window.setTimeout(() => {
+        snapping=false;
+    }, 400);
 }
 
 function scroll_to_first() {
@@ -61,9 +63,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
         e.preventDefault();
         if (!snapping) {
             snapping = true;
-            if (e.deltaY > 10)
+            if (e.deltaY > 2)
                 scroll_down();
-            else if (e.deltaY < -10)
+            else if (e.deltaY < -2)
                 scroll_up();
             else
                 snapping = false;
@@ -137,7 +139,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             add_class(paths[i], 'svg-path', rect_anim_time+10+i*char_duration);
         }
         var style = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'style');
-        style.innerHTML = `.svg-rect{visibility:visible;animation:scaleRect 0.8s ease-in-out;}@keyframes scaleRect{from{height:0;}}.svg-path{visibility:visible;animation:animPath 0.5s ease-in-out;}@keyframes animPath{from{opacity:0;}}`;
+        style.innerHTML = `.svg-rect{visibility:visible;animation:scaleRect 0.8s ease-in-out;-moz-animation:scaleRect 0.8s ease-in-out;}@keyframes scaleRect{from{height:0;}}.svg-path{visibility:visible;animation:animPath 0.5s ease-in-out;}@keyframes animPath{from{opacity:0;}}`;
         svgDoc.children[0].appendChild(style);
         window.setTimeout(() => {
             var div = document.getElementById('hero-text');

@@ -11,7 +11,8 @@
     "html": "gulp html",
     "clean": "gulp clean-all",
     "dev": "gulp dev",
-    "build": "gulp"
+    "build": "gulp",
+    "serve": "live-server --no-browser dist"
   },
   "keywords": [
     "YESM 2019",
