@@ -1,0 +1,63 @@
+{% extends 'layout.njk' %}
+
+{% block title %}YESM 2019 | Sponsors{% endblock %}
+{% block desc %}Sponsors of YESM. Young Economist Students' Meet 2019 (YESM 2019). Venue: Jadavpur University. Department of Economics. Designer: Vivek Roy.{% endblock %}
+
+{% block metahead %}
+    <link rel="stylesheet" href="css/sponsor.css">
+    <script src="js/sponsor.js"></script>
+{% endblock %}
+
+{% block content %}
+<body id="sponsor">
+    {% import 'macros/header.njk' as nav %}
+    {{ nav.gen('s') }}
+    <main id="main">
+        <section>
+            <h1>Sponsors</h1>
+            <div>
+                <div class="img-wrap" style="width:600px;height:250px;">
+                    <img class="lazy" data-src="Hatari Logo.png" src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAUCAMAAAGL5n4DAAACZFBMVEX9//z9/vv9/Pr9+/n9/fv9/fr9+ff88e/76+r9+Pb89PL89vT88/L89fT9+/j8+Pb77uz62tr4y8v51tb77Ov88fD76un74uL75eT64+L76Of87+364uL1sLL2ubr51dX62dn62Nj51NT51tX52tr64OD77+39/vz88O775+b509P2trf1sbL3vL33vr/4yMj50tP5zc34xMX63dz65OP88vD9/Pn8+vf8+ff9+vj88O/87ez75uX75+f50dH2u7z1rq/2srP4xcb4x8j2t7j2uLn4y8z629v75OP77u389fP87u399/X63d35z9D50NH88vH639/3u7z0pab2sbP2rq/1qar3wMD52dn87+789/b3wcL4zs776ej88/H64eD62tn3wsL3v8D4w8T4ysv1pqj0nqD1r7D1qKn0nJ/2tLX519b89PP63t71q633xcX74+L8+fb89/X89vX64N/51NP3w8T4x8f63Nz63Nv519fzl5n0pKb1ra7zmp363t374+P64eH1qav2sbL4ysr64uH77ez52tn50tH9+vn76Oj50ND4zc3639787e33vb70nqH0oqT3uLn1ra/0nJ73t7n61tb3xMT1qqz1p6n3xMX3vb39+vf629r76uj3wsP4ycr1rK71paf5y8z2tbb2sLL2s7X0paf0oKL1r7H2tLb1rrD0pqf0n6H75uT76Ob51NX4yMn3wMH1qqv1sLH0o6X0pqj1qKr0p6n0qKr2vLz64+H5z8/52Nj74eH2u7v3xsb2urv3w8P2s7T4zcz50tL3vr787uz76ef74uH75OT99vQvEqwhAAACr0lEQVQoU2NggAL/kCg2FgYGUS8vUW6YGAdPuLB6AgMbU1xRACNIUFCUQwoiyThXRHbhkprJq5PyYmHKYTS/sLgEE4TDquURFKrJHMPIGMfJEGulMN9oWVie63IdCwb1uBxGL1OegNPM/DB9TEyMTCwsrKjGMTJxamrp6BkYKZmYMVmogyRZLBkZ1CPLlCqFq6pra8RVfRubWupbrVvjjTs4GBi4d0vGa+0NSN5jv3/+QSH7w3YuRxO1iiCGgrUzqEMoVHtw8RiZGRmB7gJ7HxmwCAiJiEmISfKgCTNryGjr6hvqG5symkMCgQ9E+fj6CQcEBuuGRUQysUfHsqgzMprFSzEymAmXV8jHh9TUuRXUNxg1J/i22cQHtgt3MsyRn8de0DJjwaLFS5c7rli5qqZnjc5aJVFGBtZ5uyUr94jt29SSlHXgkJ7u7CNB8sfEgFHHwORlGsDJyBzAbWrKneMVwJPjY5kDjQcGkJfVwSQugOFDXArB4ixs7BzsbMycXFycbNw8vHz4dTOy8kvLCMnKyQvKyysoKimrqKoxA12D4hw4j8WS28pazMZGxNbO3sHRydnF1c3dw5OflY9dQsqLCaaHhd+bgwvkO0ZOKbvEpGSnFEFra7/UtPSMzKxsKe8AXv6cXLm8/AJRbn5mZotC/qLiyJJSX3YmBkbLru6e3r4A7wIFpf4JEydNnjJ1mkH5dHtto+gZM12SZkW7lCkIT5+dlOSq2x0RGMnMoM7sXV+/br2mSa6Ska6b6oaQpRs3bd7SvLU2a1uea9725h07E/W3rNiyq7ZGLzCAGRQQ6kzcx0/YSHicPGlrOodZNFBQpmBuRJV8YOPcwFO5CnuV5kqoVqlGHo/3jeWF+4eRlQkIWBmB/lNnYWJlAfGAmYGVBcICMtQZWVhA0mQAAMi3noOA5tphAAAAAElFTkSuQmCC" alt="Hatari">
+                </div>
+                <p>Title Sponsor</p>
+            </div>
+            <div>
+                <div class="img-wrap" style="width:444px;height:250px;">
+                    <img class="lazy" data-src="GAFA-Logo-NEw.png" src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAUCAIAAAEdHzj0AAAEdUlEQVRIS72VzU4bVxTH59Pjj8FfYAc8EKBq5WRDQGKVrtMoWXTXPkBfoOoiizxInqAVaqX2BbKsRNpIbRcppRgsQaC2oYAJGHs83/3dGUNoUlUoi1yj0cy559x7/uf/Pwc5iHzpytKiSHr8eGVzq9PvO59/dldmH1OyZFkS35fuar6w/O13q1ubnWbzQPYDdnCVIykSbvud06PjnqoqvheomhKFkSRLmUxKC8Po2U8Nw9CGjpfNGrbtZjOpXm94/5M7/zr+al68i7g/11uKogRBmEppnufruuq4/u1bltb6q/v1Nz9ub//94OHS06cvdE3NmYbnBk+efCE3tlqNRkuW5eHQIxHX8TVNMc30vXsLchACTwAEGj9p9BrhPcolRn9RgTdSeuuTKA0jtVtZWW23u2DrdF5hmZ4ur/2xNzlZmrZKtu1tbx+YY+m52cr6euvWbeurLx8qoFtb22s02rmckU7rmWyqZpVShjY7W7Ft5+DgdPVZQ9M108x0u/2aVX5wfzGbM2Q/9Ad956xng0JTVdfzQUHRifS8gKKTOnApme+HaUMvl3OKqvxfnd8C9drwjmGiJKy4ztdaCRkijFrt7R5DNbFAcl0fSMCDR98X8HRdCygd4pIkyyoXilmNDyT5/Q8/G4bebO4DN5tNwXr35HxmZqJazW822hBlmkY+n9vYaD169Ony8geK54c7Lw9Thj4YOJzGs16v3ZgsoBqFggXhy90jjBwxVSui48pEnobQXMfjDMCVSrne+TCK0vudV1S8UskPbfeX5j5aLJbMdvuEdJaW5itVwmS5dz6gCRAKSFRFARh/6QzOKm0R+AEKlxUhWU1V6nWLXFRVll3PPTnpC5bFkqCYYAoDet5jm0QYLYelWMpmM4YQ9qiLL4QOE/hJwvmKtkfyxxy3AvtvDAdhu8Z6x7BrnPwfLiNtsYMKIIm/RAzCNymHLCaSgJ7oLzbG2K8YE+cYNc0ufqMlwz0MiJ6BbLEbSVT38OissdHe3TvmPjzgjlbXNBXWhEYjoVFeHMfHgtKYWsTzRLX2wEWy9HgiK6HgIDw/H3L4tDW+sHDz5s0JoQSSCMOQwch0ffH7LvLFD2oQIWpCJZyIpubnq+Nlk9HH7ID6cnmsWsnPzIyTxO7e0c7OIXmMmWnuY2rMz1WZFb/9ut0fOB/frdfrU8ncY+5HtEinc7K11en1bM4lzEhpekrlPryxWLXSjckigCyvjEWIl+LoysB2mHLchGexmCsUcoifPgMffWJNl1H14uIc7cnQFxr1fI/gxmb7+fPm4eEps5j/A34QDocuLMKfIDIMUTQlJXER4vmjRvTDszObT3MsUyhk4cPzA1InDs/8WObDj6YW78zVpoo6HUS5/MBzveD0dNDtnnOE0H7MBAzxzk3iSliVJWiGDNrsUkqJViAGKPjjGmcm9MQJgCuXzHwhQ1QsqotGw0XocCQ7IUO2+RRXxarEWTzRhJChdJGAOEI4XLZmfIJITuJ6mVGR6CjR5nvtMyW58/08/wG1GL/ycqZamwAAAABJRU5ErkJggg==" alt="Gafa">
+                </div>
+                <p>Knowledge Partner</p>
+            </div>
+            <div>
+                <div class="img-wrap" style="width:300px;height:250px;">
+                    <img class="lazy" data-src="catalyst.jpeg" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wgARCAAUABgDAREAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAIBAwT/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAeiRN7NZmFCjAP/EABYQAQEBAAAAAAAAAAAAAAAAAAEAMP/aAAgBAQABBQJYcP/EABYRAAMAAAAAAAAAAAAAAAAAAAARMP/aAAgBAwEBPwEUP//EABcRAAMBAAAAAAAAAAAAAAAAAAABETD/2gAIAQIBAT8Borh//8QAFBABAAAAAAAAAAAAAAAAAAAAMP/aAAgBAQAGPwIf/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAERECEx/9oACAEBAAE/IenBt8xqlgnjQj//2gAMAwEAAgADAAAAEKJFop//xAAZEQEAAgMAAAAAAAAAAAAAAAABABEhMDH/2gAIAQMBAT8QytRAd0f/xAAaEQEAAQUAAAAAAAAAAAAAAAABABARICFR/9oACAECAQE/EGO1E3eBEw//xAAbEAEAAgIDAAAAAAAAAAAAAAABABEQQTFRgf/aAAgBAQABPxBinqJIqu8Gr3LDUZ5wSw1P/9k=" alt="Catalyst Learning Services">
+                </div>
+                <p>Career Partner</p>
+            </div>
+            <div>
+                <div class="img-wrap" style="width:345px;height:213px;">
+                    <img class="lazy" data-src="edusure.png" src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAUCAIAAAEU9JiOAAAAAW9yTlQBz6J3mgAABFRJREFUOE+VVUtPG1cUnjtzPQ+/Xxhh83IS1wTMLtC0UKS2gqZIcaI2u7RSKiGxQ+mvSBfNb2hRkShi06yqsmDdUkFT4e5QI2EEYxuw8QPbM56ZftdjUIQRSq+t0cycc+53zne+c4dUauVqtcrZa+evnXsT9/Avlk7JyuqKIstut0cSJXKUO7RdarUaNzHJfH5c/uG8UaPPv30ei/XnVLVer5PXf79eXFy0OAvOhOMcoijL8traGjUMA/YODMfV641qBagWyRVU0zQvDbixLKvZbJLHXzw+POyAEo44ncrcZ3NLS0vUaLVMoxOB3dfX10VRJITwmqZrF6tcLn/y8acvvnuBDelXXz8NhUKShGLcqnrk9/kBwDLM/JN5+fL7fKHwNv6Ve57np6amnjz50uFwUGZDMkiyK0IUHY/Sj6Y/mhYEqiiyx+NBTpQ6hFAojOS6/DmYd3cz/755A4RUamx2dpYhYM3Nzmq6boO0wToLtLYfEEgivRGE4YEuLy/n8nkUpCgKwkGmx+uNRWO6rmUPDs7Pz31er2lavb29/f0xr9dLToonmsbKv2kRojWbuq6DYPrz6upvGxvo4A0BgUBgYWFhaGiQR/nQyMnxcavVusISskfSoiTh6lQUtDQSiTCWnC5XKBzuRkDA0PDwN8+eoX2CIPh8PnizotHefC4PhCspwRwIBtFmn9/PEyJQwXagsWg0NZ66ojTbBvX8tLJCBYqwh+mHg4MDDGF/f39ne6cb4W3AcDj0wYf3Bwb6WUf++PP348LJRY/gZveKyfnyAVCjY3fBFd4I79+fhIXniWlZaBza53Q6IZvy2Vmj2ZQlye3xQM7Qld/vZyxtb2+jI+COOhySKIKunp6eeDy+m8nUqlXsDf0AbX5+Pj4cZzI9Ug+z2ayaU+uNBkujW7RX6Lv2sS1B7I4skDlusBWaIUkSzWYPfnn1anNzU1VVRtX/BehQRASBR/+np6fT6fTo6F2IDiJH/6jP500mk2ChVCoabOjfBYGAU6fTBXKCyBdqA3k8j02jfX3xW3GXy4Uhs0uFkCp7e3tbW1vXyul6PgiHoySRSIyPj8/MzPRGIpAZIwm/i3UZSL1ez3uJBCo4K5Wuld+1GEgwGApBAyC2Wqm0yeAECom6MAQoxR5+xLJhg1Yzu7uFfKF144x2I/3aztd+jx0DwcDk5MSDB5+PjCSBYZso+Lp1+zZOpPJZ+d0r6AZDV1xud+JOAk2Ffi6BabFUjEb7MKHoErSF2gWeN3Bm4R6OgsB4ZfuxZC3LxBDAijfwwFvMDphhLlC4ZaLhUOolP4yijY2N09OiKImI0fUWCpIVmX1GLEuRFYgP/EqSKEsyjg0cTCC9cFxArfhktVpGIOCHnLA/Jq7Z1HBspcZSyZGkx+1BXxgAphbUY1mmCWTDNCpoWvv7V2/U8VXCqYjTRceMmEZNls8bdWADAInDv6lpsNgp4wpPl7ut0U5ruP8AMdrX9yfYKVYAAAAASUVORK5CYII=" alt="Edusure">
+                </div>
+                <p>Education Partner</p>
+            </div>
+            <div>
+                <div class="img-wrap" style="width:300px;height:250px;">
+                    <h1>Competitive Success Academy</h1>
+                </div>
+                <p>Associate Sponsor</p>
+            </div>
+            <div>
+                <div class="img-wrap" style="width:299px;height:250px;">
+                    <img class="lazy" data-src="grissini.jpg" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wgARCAAUABgDAREAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIB/8QAGAEBAAMBAAAAAAAAAAAAAAAAAQACAwT/2gAMAwEAAhADEAAAAYy6NQSbKULJc52T/8QAGBAAAgMAAAAAAAAAAAAAAAAAARARIEH/2gAIAQEAAQUCIU2z/8QAGhEBAQACAwAAAAAAAAAAAAAAAQACIRAREv/aAAgBAwEBPwEeOp1eoymCDd//xAAXEQEBAQEAAAAAAAAAAAAAAAARABAg/9oACAECAQE/AYjCOP/EABQQAQAAAAAAAAAAAAAAAAAAADD/2gAIAQEABj8CH//EABsQAAIBBQAAAAAAAAAAAAAAAAABERAhMWFx/9oACAEBAAE/IYCdHBJdVWRsf//aAAwDAQACAAMAAAAQ1Q8Q/wD/xAAXEQEBAQEAAAAAAAAAAAAAAAABABFx/9oACAEDAQE/ENJLqwNgsS5ESPWOf//EABcRAQEBAQAAAAAAAAAAAAAAAAEQABH/2gAIAQIBAT8QFaBDxFzv/8QAGhABAAMAAwAAAAAAAAAAAAAAAQARITFBUf/aAAgBAQABPxAa1rBJgyWNRLprBoPZd2BHiJdLkU6bP//Z" alt="Grissini">
+                </div>
+                <p>Associate Sponsor</p>
+            </div>
+            <div>
+                <div class="img-wrap" style="width:300px;height:300px;">
+                    <img class="lazy" data-src="KMDB_logo.png" src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAAH6ji2bAAAFTElEQVQ4Tx1VS2wbVRS9M/PGv/EvcaI4jtM4hDiN0jRJWzWtkNIm0NKismHRIJDYsGbLColNqcqnFVAhEEVCQCohpBY2IELTlhZVIZ+mSpvgJo0dp05i5+dPPB7bM54ZjmNp/GbG75577rnnPnOXPrlAPT29Z2dnZ0fp9t1bA909XebPv4xo3LfXvuZUTS3h8x7348j3VrvdfojZbPbScixKrK+v7zur1fIW99P1Hyz9/f2PL178qKOnp8c0DP0GCwab9geDwfDw8DCtra1xiD3HfXH1CrW3t79AREcmpybvpHfS2+zYseNvTk1NjkxOTQknBgYUl9PVy/v9/guJRELY3EhRuVxyDA0NfcAcDkf29OnTNDg4RPF4jEBsg7t7byxstVrvLy4+84kii0xPT7/Eff7lZQqFQu7GxsC5QkF+J5lMdfI8b3G7Xemtra176XT62sLCwhNu9NYf+5qamr4aHx8/8+/EBJufmyNQp97eHvL56shud2Tw+4dMEITOQKDp4Pnzw6yzs5MmJibJ5XKS0+mkdHqHQMHd0OAf4GVZHt/e3h5BjTlVVSmfz9Pycpx2d3dJtFgMpI48efL4G64qfENDA4+ogCQ5ByXJcdThkJzJ5PrzSCRyV9O06bm5OZn77MrH1TR8fX29F+uLlUqlBehKNBpdzOayCdMwS0tLS8Tq6uqElpaW/ZIkvQvNT8lyoc7r9Wh4/8zlcl2PRP771WazZRjUDSLt+9ls5o3R0VEJiBzEpe7u7gC61+rz+Tjsuc6Q8uTW1uaZW2NjzvjKChWLCh3sPkCynBfAeR+UeJuI/4c5na4jHMd5EUAWUaTVRJo4jieBF0DVFGpqatvLZbWDMSY4wuEODpWTw24nVdPIKUmkqmVCxcQLggggiVdVLYaWqYZhEgqiw32HgERkGAYJjJlFpbhTqWgrfCaTuYMeR0zT1CE+3bh5k5KpJCE/QZrCykp8bGNjY1E4+9qraVG07GJjCF3xgBcPKhUyzQza+zsMcXVtbfU5QwcUbLoJGWJw0MsdHR2toFF89GhmRlGU26CVWF9fN7hPL1/a44YLckh2XPUQOCQIrB3oIQQ1gIUT6KiJL4DeFsBXsD4DyHJZLW9sb20rkFhXlKLJ0CUetrP7fLUtXm/NcUzNiUKh0BuNRRtj0ZiUl/PM0A0e7Ki2ttbw+xt0gCsej2cT6s1Bh3sQ6IHH443W1NTIDDK70ZNu+OZ1KHJqZ2enDQyk+fl5/mkkQgAnq81GVouIexk0TREmtAkC74XY+1DRARDqApHfdL3ykAG5ymxQFMVXVlcT4YczM/b48jIHW1MqtUEohdBkCgQayY35ACiBIcFePGLsAA+B1EkAF3K5XZnpuu632awht9tTh/LFYLCZy+VyFF+JE/SmaDSGnusEE1NraytWH8GvuPTqyvE8J4JdDYBbCgWluTqp6B7lwaIMQNPr9ZqYVK7q3a6uLjp6tB+j7SNFKVA6k6aKViGQqNoUTsC3aRp4VgFegJYy0zQ1jjKmkKUFoE54ug4bWJVF1Y0YBhxFRQxHEaDKXvno+t6KG71UKu9C9wWlWJwoFUtPGR5S8MPfCFbQtU2Hw35cr+jN0Ecql8vCwsIiJMgSmFNzczMOIXv1UDWAVkTSJLSeSqWSf8JmD5BojcHeGgLX0c2/stnsHLrdDRkOWyyWrnA43NTW1ubBffUAJ57jtUw2k0+lUutIHsH7GeydxRgl0umMjHc6y+d3q6ergZcyOreEK47gMRz+bgTUYoo9ONwcmqpxqKIIX+aQOIPKctWjCYCa1Woz8P+wZ7H/Ae6f04EqufRfAAAAAElFTkSuQmCC" alt="KMDB">
+                </div>
+                <p>Gift Sponsor</p>
+            </div>
+        </section>
+    </main>
+</body>
+{% endblock %}
