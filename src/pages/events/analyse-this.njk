@@ -1,28 +1,29 @@
 {% extends "events_layout.njk" %}
 
 {% block edesc %}Analyse this. Critical Thinking.{% endblock %}
-{% block title %}YESM 2019 | Analyse This{% endblock %}
+{% block title %}YESM 2020 | Analyse This{% endblock %}
 
 {% block econtent %}
     {% import 'macros/event_text.njk' as et %}
     {{ et.gen_htext("athis", "84", "15.8") }}
     <h1 class="d_none">Analyse This</h1>
     <h2>Critical Thinking</h2>
-    <p>The human brain is perhaps one of the most complex systems in the world. Refined through millions of years of evolution, it is capable of building machines that traverse the length of space. This should be easy then, right? Get ready to use the full potential of your mental faculties, since for this event, you really need to think.</p>
-    {{ et.gen_h3("Format:") }}
+    <p>This January, "brainy is the new brawny!" No problem is impossible to solve; you just have to be creative enough to find the solution. So bring along your thinking caps, and brush up those ‘little grey cells’. You just need to analyze this!</p>
+    {{ et.gen_h3("General Rules:") }}
     {{ et.gen_ul([
-        "The event consists of two rounds, Prelims and the Final Round.",
-        "The Prelims will be a written round based roughly on your Undergraduate syllabus. However, since this is a critical thinking event, do not expect typical textbook questions.",
-        "The Final Round will consist of a presentation. The teams that qualify for the Final Round will be provided with their question/topic 1 hour before the presentation.",
-        "A total time of 10+2 minutes shall be allotted for your presentation. The first 10 minutes are for answering/explaining and the next 2 minutes are reserved for questions from the judges. However, the time allotted for questions from the judges can be extended at their discretion."
-    ]) }}
-    {{ et.gen_h3("Rules and Eligibility:") }}
-    {{ et.gen_ul([
-        "Each team must consist of 2 or 3 members.",
-        "All participants must be enrolled in an undergraduate Economics course.",
-        "Participants belonging to different years can be on the same team.",
+        "A maximum of 3 and a minimum of 2 participants will be allowed per team.",
+        "All participants must be enrolled in bachelor's course in the discipline of Economics. (Only UG students are allowed).",
+        "Participants in one team can be from different academic years.",
         "Cross-College teams are allowed.",
         "There is no limit to the number of teams participating from a college."
     ]) }}
-    {{ et.gen_btn("https://goo.gl/forms/qZ6I9QoocCnJxkW82") }}
+    
+    <h2>About:</h2>
+    <p>The event will be comprised of two rounds.One prelims followed by the final round. The time allocated for the prelims is 25 minutes and the time for the final round will be of 45 minutes.
+<br>
+The rules will be declared on spot.</p>
+<h2>Note</h2>
+    <p>Every team is advised to bring at least one scientific calculator.</p>
+
+    {{ et.gen_btn("https://forms.gle/zmh2gs5ncihVo3ty8") }}
 {% endblock %}
