@@ -1,26 +1,23 @@
 {% extends "events_layout.njk" %}
 
 {% block edesc %}Flagship event. Sacred Gains.{% endblock %}
-{% block title %}YESM 2019 | Sacred Gains{% endblock %}
+{% block title %}YESM 2020 | Strategize{% endblock %}
 
 {% block econtent %}
     {% import 'macros/event_text.njk' as et %}
-    {{ et.gen_htext("sgames","89.7","15.9") }}
-    <h1 class="d_none">Sacred Gains</h1>
+    <div style="font-size:65px;font-family:ariel"><br>STRATEGIZE</div>
     <h2>Flagship Event</h2>
-    <p>In the world around us today, do the profits of a few outweigh the losses of the many? Are the ‘Gains’ of the top 1% truly ‘Sacred’? Is the economic system just an elaborate man-made version of natural selection where the rich survive? What would you do if you possessed such wealth? Would you aggressively dismantle all those who opposed you, or are you a calm strategist who waits for the right conditions? Decide for yourself as you join us for what we promise will be an event different from any other.</p>
+    <p>“Hope is not a strategy.” Vince Lombardi.</p>
+    <p>Set out on a mission to win everything that is there to win. Create your chances, and capitalise on them. This is your opportunity to showcase the master tactician in you, as you connive and conspire to crush your competition and reach the peaks of glory.</p>
     {{ et.gen_h3("Rules and Eligibility:") }}
     {{ et.gen_ul([
         "Each team must consist of either 2 or 3 members.",
-        "All participants must be enrolled in an undergraduate Economics course or a BCom course.",
-        "Participants belonging to different years can be on the same team.",
-        "Cross-College teams are allowed.",
-        "There is no limit to the number of teams participating from a college."
+        "The event is open for all but they must be enrolled Undergraduate students under any discipline. Each team must have atleast one participant from Economics discipline.",
+        "Cross-college teams are allowed.",
+        "There is no limit to the number of teams participating from any particular institution.",
+        "Further details shall be given at the venue, prior to the event.."
     ]) }}
-    {{ et.gen_h3("Format:") }}
-    {{ et.gen_ul([
-        "The event shall consist of a Prelims round and a Final round. Both shall take place on-campus, during YESM 2019.",
-        "All further details regarding the structure of the event shall be provided on the day of the event."
-    ]) }}
-    {{ et.gen_btn("https://goo.gl/forms/Bly1ERM0Z0hG68UI3") }}
+    {{ et.gen_btn("https://forms.gle/4tEpWw74pUTnzUgk6
+
+") }}
 {% endblock %}
