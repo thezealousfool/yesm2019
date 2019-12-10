@@ -7,7 +7,7 @@
             {# <li><a {% if name == 'g' %}class="{{nav_active_class}}" href="javascript:void(0);"{% else %}href="/guests"{% endif %}>Guests</a></li> #}
             <li><a {% if name | first == 'e' %}class="{{nav_active_class}}"{% endif %} {% if name == 'e' %}href="javascript:void(0);"{% else %}href="/events"{% endif %}>Events</a></li>
             {# <li><a {% if name == 's' %}class="{{nav_active_class}}" href="javascript:void(0);"{% else %}href="/sponsors"{% endif %}>Sponsors</a></li> #}
-            {# <li><a {% if name == 'o' %}class="{{nav_active_class}}" href="javascript:void(0);"{% else %}href="/our-team"{% endif %}>Our Team</a></li> #}
+            <li><a {% if name == 'o' %}class="{{nav_active_class}}" href="javascript:void(0);"{% else %}href="/our-team"{% endif %}>Our Team</a></li> 
         </nav>
     </header>
 {% endmacro %}
