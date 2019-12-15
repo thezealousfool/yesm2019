@@ -9,6 +9,7 @@
 {% endblock %}
 
 {% block content %}
+    {% import 'macros/event_text.njk' as et %}
 <body id="team">
     {% import 'macros/header.njk' as nav %}
     {{ nav.gen('o') }}
